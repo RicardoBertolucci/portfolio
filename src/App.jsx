@@ -1,7 +1,9 @@
+import Header from './components/Header/Header.jsx'
+
 function App() {
   return (
     <>
-      <h1>Portfolio em construção 🚧</h1>
+      <Header />
     </>
   )
 }
