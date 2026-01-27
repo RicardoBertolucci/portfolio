@@ -11,6 +11,11 @@
 
   --white: #f3f3f3;
   --text-muted: #a1a1aa;
+
+  --fs-base: 16px;
+  --fs-md: 20px;
+  --fs-lg: 28px;
+  --fs-xl: 32px;
 }
 
 [data-theme="light"] {
@@ -29,7 +34,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: linear-gradient(
     135deg,
     #0f0f14 0%,
