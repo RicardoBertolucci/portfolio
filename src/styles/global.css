@@ -43,6 +43,7 @@ body {
     #4277e1 100%
   );
   color: var(--white);
+  background-repeat: no-repeat;
 }
 
 [data-theme="light"] body {
@@ -53,4 +54,17 @@ body {
     #9f67ff 70%,
     #4c7dff 100%
   );
+}
+
+main {
+  padding-top: 74px;
+  max-width: 94vw;
+  margin: 0 auto;
+  padding-inline: 2rem;
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding-inline: unset;
+  }
 }
