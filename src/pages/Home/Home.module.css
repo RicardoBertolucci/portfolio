@@ -15,7 +15,7 @@
 }
 
 .home__container {
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -31,7 +31,6 @@
   font-size: var(--fs-base);
   line-height: 1.6;
   color: var(--text-muted, #b5b5b5);
-  max-width: 520px;
 }
 
 .home__buttons {
@@ -75,7 +74,7 @@
 
 .home__image {
   width: 35%;
-  max-width: 360px;
+  max-width: 420px;
   border-radius: 16px;
   object-fit: cover;
 

@@ -12,10 +12,10 @@
   --white: #f3f3f3;
   --text-muted: #a1a1aa;
 
-  --fs-base: 16px;
-  --fs-md: 20px;
-  --fs-lg: 28px;
-  --fs-xl: 32px;
+  --fs-base: 24px;
+  --fs-md: 32px;
+  --fs-lg: 40px;
+  --fs-xl: 48px;
 }
 
 [data-theme="light"] {
@@ -71,5 +71,12 @@ main {
 @media (max-width: 1024px) {
   main {
     padding-inline: unset;
+  }
+
+  :root {
+    --fs-base: 16px;
+    --fs-md: 20px;
+    --fs-lg: 26px;
+    --fs-xl: 32px;
   }
 }
