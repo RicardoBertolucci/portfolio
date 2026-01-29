@@ -1,0 +1,117 @@
+.about {
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 24px;
+  backdrop-filter: blur(6px);
+}
+
+/* Títulos */
+.about__title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.about__subtitle {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  margin: 3rem 0 1.5rem;
+}
+
+/* Textos */
+.about__text {
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Botão CV */
+.about__button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-size: var(--fs-base);
+  font-weight: 500;
+  color: var(--white);
+  background: linear-gradient(
+    135deg,
+    var(--purple),
+    var(--blue)
+  );
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(153, 86, 246, 0.35);
+}
+
+/* Skills */
+.about__skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about__skill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.about__skill:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Ícones */
+.about__icon {
+  font-size: 34px;
+  color: var(--purple-light);
+}
+
+/* Label */
+.about__label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+/* ===================== */
+/* 📱 RESPONSIVO MOBILE */
+/* ===================== */
+@media (max-width: 768px) {
+  .about {
+    padding: 2.2rem 1.2rem;
+    margin-top: 4rem;
+  }
+
+  .about__title {
+    font-size: 1.6rem;
+  }
+
+  .about__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about__text {
+    font-size: 0.95rem;
+  }
+
+  .about__skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
