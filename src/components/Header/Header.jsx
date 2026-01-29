@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -26,24 +25,24 @@ const Header = () => {
         <nav className={styles.navbar__nav}>
           <ul className={styles.navbar__list}>
             <li>
-              <NavLink to="/" end className={styles.navbar__link}>
+              <a href="#home" className={styles.navbar__link}>
                 Home
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/about" className={styles.navbar__link}>
+              <a href="#about" className={styles.navbar__link}>
                 Sobre
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/projects" className={styles.navbar__link}>
+              <a href="#projects" className={styles.navbar__link}>
                 Projetos
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/contact" className={styles.navbar__link}>
+              <a href="#contact" className={styles.navbar__link}>
                 Contato
-              </NavLink>
+              </a>
             </li>
           </ul>
         </nav>
@@ -61,40 +60,40 @@ const Header = () => {
         >
           <ul className={styles.mobileMenu__list}>
             <li>
-              <NavLink
-                to="/"
+              <a
+                href="#home"
                 className={styles.mobileMenu__link}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink
-                to="/about"
+              <a
+                href="#about"
                 className={styles.mobileMenu__link}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Sobre
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink
-                to="/projects"
+              <a
+                href="#projects"
                 className={styles.mobileMenu__link}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projetos
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink
-                to="/contact"
+              <a
+                href="#contact"
                 className={styles.mobileMenu__link}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contato
-              </NavLink>
+              </a>
             </li>
           </ul>
         </div>

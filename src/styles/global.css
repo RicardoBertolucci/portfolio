@@ -33,6 +33,11 @@
   --text-muted: #5b5b66;
 }
 
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background: linear-gradient(
@@ -43,7 +48,7 @@ body {
     #4277e1 100%
   );
   color: var(--white);
-  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 [data-theme="light"] body {
