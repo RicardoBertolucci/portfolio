@@ -1,0 +1,36 @@
+.projects {
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.projects__title {
+  font-size: var(--fs-lg);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .projects {
+    padding: 3rem 0;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
