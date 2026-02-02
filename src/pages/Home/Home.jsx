@@ -1,4 +1,4 @@
-import photo from "../../assets/img/photo.jpeg";
+import photo from "../../assets/img/home/photo.jpeg";
 import styles from "./Home.module.css";
 
 const Home = () => {
