@@ -1,12 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import styles from "./Header.module.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
 
   return (
-    <header className={styles.navbar}>
+    <header
+      className={`${styles.navbar} ${isScrolled ? styles["navbar--scrolled"] : ""
+        }`}
+    >
       <div className={styles.navbar__container}>
         <h1 className={styles.navbar__title}>
           Ricardo Bertolucci <span>| Dev.</span>
@@ -18,7 +33,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label="Abrir menu"
         >
-          {isMenuOpen ? <FiX size={24} color="#ffffff" /> : <FiMenu size={24} color="#ffffff" />}
+          {isMenuOpen ? <FiX size={24} color="#ffffff"/> : <FiMenu size={24} color="#ffffff" />}
         </button>
 
         {/* Menu DESKTOP */}
@@ -50,9 +65,8 @@ const Header = () => {
 
       {/* Menu MOBILE (overlay) */}
       <nav
-        className={`${styles.mobileMenu} ${
-          isMenuOpen ? styles["mobileMenu--open"] : ""
-        }`}
+        className={`${styles.mobileMenu} ${isMenuOpen ? styles["mobileMenu--open"] : ""
+          }`}
       >
         <div
           className={styles.mobileMenu__content}
