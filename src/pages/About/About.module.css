@@ -5,7 +5,6 @@
   backdrop-filter: blur(6px);
 }
 
-/* Títulos */
 .about__title {
   font-size: var(--fs-lg);
   font-weight: 700;
@@ -18,7 +17,6 @@
   margin: 3rem 0 1.5rem;
 }
 
-/* Textos */
 .about__text {
   font-size: var(--fs-base);
   line-height: 1.7;
@@ -26,7 +24,6 @@
   margin-bottom: 1rem;
 }
 
-/* Botão CV */
 .about__button {
   display: inline-block;
   margin-top: 1.5rem;
@@ -49,7 +46,6 @@
   box-shadow: 0 10px 30px rgba(153, 86, 246, 0.35);
 }
 
-/* Skills */
 .about__skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -77,13 +73,11 @@
   background: rgba(255, 255, 255, 0.07);
 }
 
-/* Ícones */
 .about__icon {
   font-size: 34px;
   color: var(--purple-light);
 }
 
-/* Label */
 .about__label {
   font-size: 0.9rem;
   font-weight: 500;
@@ -91,7 +85,7 @@
 }
 
 /* ===================== */
-/* 📱 RESPONSIVO MOBILE */
+/* ===== RESPONSIVO ==== */
 /* ===================== */
 @media (max-width: 768px) {
   .about {

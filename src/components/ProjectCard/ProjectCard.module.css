@@ -47,7 +47,6 @@
   opacity: 1;
 }
 
-/* Mobile: overlay sempre acessível */
 @media (max-width: 640px) {
   .card__overlay {
     opacity: 1;

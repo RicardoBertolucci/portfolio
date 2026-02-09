@@ -16,11 +16,23 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   return (
     <header
-      className={`${styles.navbar} ${isScrolled ? styles["navbar--scrolled"] : ""
-        }`}
+      className={`${styles.navbar} ${
+        isScrolled ? styles["navbar--scrolled"] : ""
+      }`}
     >
       <div className={styles.navbar__container}>
         <h1 className={styles.navbar__title}>
@@ -33,7 +45,11 @@ const Header = () => {
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label="Abrir menu"
         >
-          {isMenuOpen ? <FiX size={24} color="#ffffff"/> : <FiMenu size={24} color="#ffffff" />}
+          {isMenuOpen ? (
+            <FiX size={24} color="#ffffff" />
+          ) : (
+            <FiMenu size={24} color="#ffffff" />
+          )}
         </button>
 
         {/* Menu DESKTOP */}
@@ -65,8 +81,9 @@ const Header = () => {
 
       {/* Menu MOBILE (overlay) */}
       <nav
-        className={`${styles.mobileMenu} ${isMenuOpen ? styles["mobileMenu--open"] : ""
-          }`}
+        className={`${styles.mobileMenu} ${
+          isMenuOpen ? styles["mobileMenu--open"] : ""
+        }`}
       >
         <div
           className={styles.mobileMenu__content}

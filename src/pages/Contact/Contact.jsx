@@ -30,7 +30,7 @@ const Contact = () => {
 
           <div className={styles.contact__details}>
             <p>
-              <FiMail /> ricardo@email.com
+              <FiMail /> ric.bertolucci@gmail.com
             </p>
             <p>
               <FiMapPin /> São Paulo – Brasil
