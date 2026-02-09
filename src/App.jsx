@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home.jsx";
 import About from "./pages/About/About.jsx";
 import Projects from "./pages/Projects/Projects.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Projects />
           <Contact />
       </main>
+      <Footer />
     </>
   );
 }
