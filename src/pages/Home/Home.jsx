@@ -2,6 +2,13 @@ import photo from "../../assets/img/home/photo.jpeg";
 import styles from "./Home.module.css";
 
 const Home = () => {
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section id="home" className={styles.home}>
       <div className={styles.home__container}>
@@ -14,8 +21,20 @@ const Home = () => {
           integrações e sistemas escaláveis.
         </p>
         <div className={styles.home__buttons}>
-          <button className={styles.home__projects}>Ver projetos</button>
-          <button className={styles.home__contact}>Entre em contato</button>
+          <button
+            className={styles.home__projects}
+            onClick={() => scrollToSection("projects")}
+            type="button"
+          >
+            Ver projetos
+          </button>
+          <button
+            className={styles.home__contact}
+            onClick={() => scrollToSection("contact")}
+            type="button"
+          >
+            Entre em contato
+          </button>
         </div>
       </div>
       <img
