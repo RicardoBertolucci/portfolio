@@ -27,7 +27,7 @@ const About = () => {
       </p>
 
       <a
-        href="/Ricardo_Bertolucci_Desenvolvedor_Backend.pdf"
+        href="/Ricardo_Bertolucci.pdf"
         download
         className={styles.about__button}
       >
