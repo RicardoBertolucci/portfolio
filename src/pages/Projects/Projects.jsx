@@ -3,6 +3,7 @@ import styles from "./Projects.module.css";
 
 // imagens dos projetos
 import refund from "../../assets/img/projects/Refund.png";
+import numberGenerator from "../../assets/img/projects/NumberGenerator.png";
 
 const Projects = () => {
   const projects = [
@@ -12,6 +13,13 @@ const Projects = () => {
       techs: "HTML | CSS | JavaScript",
       live: "https://ricardobertolucci.github.io/Refund/",
       repo: "https://github.com/RicardoBertolucci/Refund",
+    },
+    {
+      title: "Number Generator",
+      image: numberGenerator,
+      techs: "HTML | CSS | JavaScript",
+      live: "https://ricardobertolucci.github.io/Sorteador-de-Numeros/",
+      repo: "https://github.com/RicardoBertolucci/Sorteador-de-Numeros",
     },
   ];
 
