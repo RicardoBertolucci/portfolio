@@ -13,7 +13,7 @@ const Home = () => {
     <section id="home" className={styles.home}>
       <div className={styles.home__container}>
         <h2 className={styles.home__headline}>
-          Desenvolvedor Full Stack com foco em Back-end (Node.js)
+          Desenvolvedor Back-end
         </h2>
         <p className={styles.home__description}>
           Experiência em desenvolvimento de aplicações web, com base sólida em
