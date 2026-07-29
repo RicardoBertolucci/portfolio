@@ -1,7 +1,7 @@
 import styles from "./About.module.css";
 
 import { FaNodeJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiJavascript, SiTypescript } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
 
 const About = () => {
   return (
@@ -10,9 +10,9 @@ const About = () => {
 
       <p className={styles.about__text}>
         Sou desenvolvedor Full Stack com experiência em aplicações web, atuando
-        principalmente no front-end nos últimos anos. No momento, estou em transição
-        de carreira com foco em back-end, aprofundando conhecimentos em Node.js,
-        construção de APIs, integrações e arquitetura de sistemas.
+        principalmente no front-end nos últimos anos. Atualmente aprofundo meus
+        conhecimentos em back-end com Node.js — construção de APIs, integrações
+        e arquitetura de sistemas — por meio de uma trilha de projetos práticos.
       </p>
 
       <p className={styles.about__text}>
@@ -45,11 +45,6 @@ const About = () => {
         <li className={styles.about__skill}>
           <SiJavascript className={styles.about__icon} />
           <p className={styles.about__label}>JavaScript</p>
-        </li>
-
-        <li className={styles.about__skill}>
-          <SiTypescript className={styles.about__icon} />
-          <p className={styles.about__label}>TypeScript</p>
         </li>
 
         <li className={styles.about__skill}>
