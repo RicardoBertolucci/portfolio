@@ -5,10 +5,17 @@ import {
   FiLinkedin,
 } from "react-icons/fi";
 import styles from "./Contact.module.css";
+import { useInViewport } from "../../hooks/useInViewport";
 
 const Contact = () => {
+  const [ref, isVisible] = useInViewport();
+
   return (
-    <section id="contact" className={styles.contact}>
+    <section
+      id="contact"
+      ref={ref}
+      className={`${styles.contact} reveal ${isVisible ? "reveal--visible" : ""}`}
+    >
       {/* Header da seção */}
       <div className={styles.contact__header}>
         <span className={styles.contact__eyebrow}>Vamos conversar</span>

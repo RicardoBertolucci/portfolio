@@ -51,6 +51,7 @@
 }
 
 .navbar__link {
+  position: relative;
   font-size: var(--fs-base);
   font-weight: 500;
 
@@ -58,8 +59,25 @@
   transition: color 0.3s ease;
 }
 
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--blue-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
 .navbar__link:hover {
   color: var(--blue-light);
+}
+
+.navbar__link:hover::after {
+  transform: scaleX(1);
 }
 
 /* navbar toggle */

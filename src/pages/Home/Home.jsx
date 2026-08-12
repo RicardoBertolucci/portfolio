@@ -13,12 +13,13 @@ const Home = () => {
     <section id="home" className={styles.home}>
       <div className={styles.home__container}>
         <h2 className={styles.home__headline}>
-          Desenvolvedor Back-end
+          Desenvolvedor Full Stack
         </h2>
         <p className={styles.home__description}>
-          Experiência em desenvolvimento de aplicações web, com base sólida em
-          front-end e foco atual em back-end, atuando na construção de APIs,
-          integrações e sistemas escaláveis.
+          Experiência prática em front-end (React, Next.js) construindo
+          interfaces modernas e performáticas, com contato em back-end
+          (Node.js) e aprofundamento contínuo através de uma trilha própria
+          de projetos.
         </p>
         <div className={styles.home__buttons}>
           <button

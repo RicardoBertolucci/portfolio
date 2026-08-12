@@ -96,16 +96,28 @@
   padding: 0.9rem;
   border-radius: 999px;
   border: none;
-  background: var(--blue);
+  background: linear-gradient(135deg, var(--purple), var(--blue));
   color: #fff;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact__form button:hover {
-  background: var(--blue-light);
+  filter: brightness(1.12);
   transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(153, 86, 246, 0.35);
+}
+
+.contact__form input,
+.contact__form textarea {
+  transition: box-shadow 0.2s ease;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--purple-light);
 }
 
 @media (max-width: 768px) {

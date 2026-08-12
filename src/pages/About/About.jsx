@@ -1,18 +1,26 @@
 import styles from "./About.module.css";
+import { useInViewport } from "../../hooks/useInViewport";
 
 import { FaNodeJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
 import { SiJavascript, SiTypescript } from "react-icons/si";
 
 const About = () => {
+  const [ref, isVisible] = useInViewport();
+
   return (
-    <section id="about" className={styles.about}>
+    <section
+      id="about"
+      ref={ref}
+      className={`${styles.about} reveal ${isVisible ? "reveal--visible" : ""}`}
+    >
       <h3 className={styles.about__title}>Sobre mim</h3>
 
       <p className={styles.about__text}>
-        Sou desenvolvedor Full Stack com experiência em aplicações web, atuando
-        principalmente no front-end nos últimos anos. No momento, estou em transição
-        de carreira com foco em back-end, aprofundando conhecimentos em Node.js,
-        construção de APIs, integrações e arquitetura de sistemas.
+        Sou desenvolvedor Full Stack com experiência prática em front-end
+        (React, Next.js) nos últimos anos, e contato com back-end em Node.js.
+        Estou aprofundando esses conhecimentos através de uma trilha própria
+        de projetos, com foco em consolidar fundamentos antes de avançar para
+        tópicos mais complexos.
       </p>
 
       <p className={styles.about__text}>
