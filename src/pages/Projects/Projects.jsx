@@ -1,6 +1,5 @@
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import styles from "./Projects.module.css";
-import { useInViewport } from "../../hooks/useInViewport";
 
 // imagens dos projetos - Fase 1 (Trilha)
 import calculadora from "../../assets/img/projects/Calculadora.png";
@@ -53,39 +52,33 @@ const otherProjects = [
 ];
 
 const Projects = () => {
-  const [trilhaRef, trilhaVisible] = useInViewport();
-  const [othersRef, othersVisible] = useInViewport();
-
   return (
     <section id="projects" className={styles.projects}>
-      <h2 className={styles.projects__title}>Projetos</h2>
+      <div className={styles.projects__header}>
+        <span className={styles.projects__eyebrow}>Portfólio</span>
+        <h2 className={styles.projects__title}>Projetos</h2>
+      </div>
 
-      <div
-        ref={trilhaRef}
-        className={`${styles.projects__group} reveal ${
-          trilhaVisible ? "reveal--visible" : ""
-        }`}
-      >
+      <div className={styles.projects__group}>
         <h3 className={styles.projects__groupTitle}>
-          Fase 1 <span>— Fundamentos</span>
+          <span className={styles.projects__groupBadge}>01</span>
+          Fase 1 <span className={styles.projects__groupMuted}>— Fundamentos</span>
         </h3>
         <div className={styles.projects__grid}>
-          {trilhaProjects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+          {trilhaProjects.map((project, index) => (
+            <ProjectCard key={project.title} index={index} {...project} />
           ))}
         </div>
       </div>
 
-      <div
-        ref={othersRef}
-        className={`${styles.projects__group} reveal ${
-          othersVisible ? "reveal--visible" : ""
-        }`}
-      >
-        <h3 className={styles.projects__groupTitle}>Outros projetos</h3>
+      <div className={styles.projects__group}>
+        <h3 className={styles.projects__groupTitle}>
+          <span className={styles.projects__groupBadge}>02</span>
+          Outros projetos
+        </h3>
         <div className={styles.projects__grid}>
-          {otherProjects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+          {otherProjects.map((project, index) => (
+            <ProjectCard key={project.title} index={index} {...project} />
           ))}
         </div>
       </div>

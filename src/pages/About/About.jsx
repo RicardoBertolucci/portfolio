@@ -3,6 +3,7 @@ import { useInViewport } from "../../hooks/useInViewport";
 
 import { FaNodeJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
+import { FiDownload } from "react-icons/fi";
 
 const About = () => {
   const [ref, isVisible] = useInViewport();
@@ -39,6 +40,7 @@ const About = () => {
         download
         className={styles.about__button}
       >
+        <FiDownload aria-hidden="true" />
         Download CV
       </a>
 
@@ -46,27 +48,37 @@ const About = () => {
 
       <ul className={styles.about__skills}>
         <li className={styles.about__skill}>
-          <FaNodeJs className={styles.about__icon} />
+          <span className={styles.about__iconWrap}>
+            <FaNodeJs className={styles.about__icon} />
+          </span>
           <p className={styles.about__label}>NodeJS</p>
         </li>
 
         <li className={styles.about__skill}>
-          <SiJavascript className={styles.about__icon} />
+          <span className={styles.about__iconWrap}>
+            <SiJavascript className={styles.about__icon} />
+          </span>
           <p className={styles.about__label}>JavaScript</p>
         </li>
 
         <li className={styles.about__skill}>
-          <FaReact className={styles.about__icon} />
+          <span className={styles.about__iconWrap}>
+            <FaReact className={styles.about__icon} />
+          </span>
           <p className={styles.about__label}>React</p>
         </li>
 
         <li className={styles.about__skill}>
-          <FaGitAlt className={styles.about__icon} />
+          <span className={styles.about__iconWrap}>
+            <FaGitAlt className={styles.about__icon} />
+          </span>
           <p className={styles.about__label}>Git</p>
         </li>
 
         <li className={styles.about__skill}>
-          <FaGithub className={styles.about__icon} />
+          <span className={styles.about__iconWrap}>
+            <FaGithub className={styles.about__icon} />
+          </span>
           <p className={styles.about__label}>GitHub</p>
         </li>
       </ul>

@@ -1,6 +1,6 @@
 :root {
-  --bg-primary: #0f0f14;
-  --bg-secondary: #181820;
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #14141c;
   --grey-dark: #2a2a2a;
 
   --purple: #9956f6;
@@ -16,6 +16,20 @@
   --fs-md: 32px;
   --fs-lg: 40px;
   --fs-xl: 48px;
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-bg-hover: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.09);
+
+  --shadow-glow: 0 20px 60px -15px rgba(153, 86, 246, 0.35);
+  --shadow-soft: 0 20px 45px -20px rgba(0, 0, 0, 0.55);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Adição Futura */
@@ -32,6 +46,12 @@
 
   --white: #111111;
   --text-muted: #5b5b66;
+
+  --glass-bg: rgba(17, 17, 17, 0.03);
+  --glass-bg-hover: rgba(17, 17, 17, 0.06);
+  --glass-border: rgba(17, 17, 17, 0.08);
+
+  --shadow-soft: 0 20px 45px -20px rgba(17, 17, 17, 0.18);
 }
 
 html,
@@ -48,26 +68,38 @@ h4 {
 }
 
 body {
+  position: relative;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(
-    135deg,
-    #0f0f14 0%,
-    #181820 35%,
-    #2c0d9c 65%,
-    #4277e1 100%
-  );
+  background: var(--bg-primary);
   color: var(--white);
-  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
-[data-theme="light"] body {
-  background: linear-gradient(
-    135deg,
-    #f5f7fb 0%,
-    #ffffff 40%,
-    #9f67ff 70%,
-    #4c7dff 100%
-  );
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(38rem 30rem at 12% -8%, rgba(153, 86, 246, 0.28), transparent 60%),
+    radial-gradient(34rem 28rem at 108% 12%, rgba(66, 119, 225, 0.24), transparent 60%),
+    radial-gradient(30rem 26rem at 20% 105%, rgba(66, 119, 225, 0.16), transparent 60%),
+    var(--bg-primary);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  opacity: 0.5;
+}
+
+[data-theme="light"] body::after {
+  background-image: radial-gradient(rgba(17, 17, 17, 0.08) 1px, transparent 1px);
 }
 
 main {
@@ -84,7 +116,7 @@ section {
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
 }
 
 .reveal--visible {
