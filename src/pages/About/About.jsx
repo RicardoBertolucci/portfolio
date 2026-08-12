@@ -2,7 +2,7 @@ import styles from "./About.module.css";
 import { useInViewport } from "../../hooks/useInViewport";
 
 import { FaNodeJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiJavascript, SiTypescript } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
 
 const About = () => {
   const [ref, isVisible] = useInViewport();
@@ -53,11 +53,6 @@ const About = () => {
         <li className={styles.about__skill}>
           <SiJavascript className={styles.about__icon} />
           <p className={styles.about__label}>JavaScript</p>
-        </li>
-
-        <li className={styles.about__skill}>
-          <SiTypescript className={styles.about__icon} />
-          <p className={styles.about__label}>TypeScript</p>
         </li>
 
         <li className={styles.about__skill}>
