@@ -5,6 +5,7 @@ import styles from "./Projects.module.css";
 import calculadora from "../../assets/img/projects/Calculadora.png";
 import listaDeTarefas from "../../assets/img/projects/ListaDeTarefas.png";
 import quiz from "../../assets/img/projects/Quiz.png";
+import galeria from "../../assets/img/projects/Galeria.jpg";
 
 // imagens dos projetos - outros
 import refund from "../../assets/img/projects/Refund.png";
@@ -31,6 +32,13 @@ const trilhaProjects = [
     techs: "HTML | CSS | JavaScript",
     live: "https://ricardobertolucci.github.io/Quiz-Perguntas/",
     repo: "https://github.com/RicardoBertolucci/Quiz-Perguntas",
+  },
+  {
+    title: "Galeria de Imagens",
+    image: galeria,
+    techs: "HTML | CSS | JavaScript",
+    live: "https://ricardobertolucci.github.io/Galeria-de-Imagens/",
+    repo: "https://github.com/RicardoBertolucci/Galeria-de-Imagens",
   },
 ];
 
